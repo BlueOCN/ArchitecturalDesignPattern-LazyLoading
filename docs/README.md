@@ -5,7 +5,7 @@
 # Lazy Loading
 Lazy Loading (or Lazy Initialization) is a design pattern in Java where an object is instantiated only when it is first accessed, rather than at application startup. This approach defers resource-heavy initialization, reduces memory usage, and improves startup performance. It is commonly implemented using getters, proxies, or the Singleton pattern with lazy instantiation.
 
-![sequence diagram](docs/img.png)
+![sequence diagram](img.png)
 
 This sequence diagram shows how lazy loading works at runtime. The Client requests data from the Proxy/Loader, which checks whether the ActualObject has already been created. If it is not initialized, the Proxy/Loader loads and instantiates the ActualObject, then delegates the request to it. The ActualObject returns the data to the Proxy/Loader, which finally passes it back to the Client. This ensures the ActualObject is only created when first needed, optimizing resource usage and performance.
 
@@ -34,7 +34,7 @@ This sequence diagram shows how lazy loading works at runtime. The Client reques
 ### 🏗️ Architecture Layout
 This UML diagram illustrates the Lazy Loading pattern where the Client requests data through the ProxyLoader. The ProxyLoader checks if the ActualObject has been initialized; if not, it loads and creates the instance before delegating the request. Once initialized, the ProxyLoader simply forwards subsequent calls to the ActualObject, ensuring that the resource is only created when needed, optimizing performance and memory usage.
 
-![uml diagram](docs/img_1.png)
+![uml diagram](img_1.png)
 
 ---
 
